@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color:#6400e4;
+    --box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.34);
+    --hover-shadow: 0px 4px 4px 0px rgba(3,3,3,0.516);
+    --nav-shadow: 0px 0px 10px 0px rgba(0,0,0,0.10);
+    --light-black: #141c3a;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    /* background: #000; */
+    background-color: #141c3a;
+}
+
+.container{
+    width:28%;
+    margin:100px auto;
+    background-color: #141c3a;
+}

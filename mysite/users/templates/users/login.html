@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+
+    <link src="stylesheet" href="{% static 'users/style.css' %}">
+</head>
+<body>
+    <!-- <h1></h1> -->
+    <div class="container">
+        <div class="header">
+            <h1>Login to Codecadmy</h1>   
+        </div>
+
+        <form>
+            <label for="username">Username</label>
+            <input type="text">
+
+            <label for="password">Password</label>
+            <input type="password">
+
+            <!-- link if user forget his/her password -->
+            <a href="#">Froget password?</a>
+
+            <!-- submit button -->
+            <button type="submit">Login</button>
+            <!-- <input type='submit' value="log in"> -->
+        </form>
+
+        <!-- footer for login with other acc -->
+        <div class="footer">
+            <h3>Login with another account</h3>
+            <img src="{% static 'images/1.png' %}">
+            <img src="{% static 'images/2.png' %}">
+            <img src="{% static 'images/3.png' %}">
+            <img src="{% static 'images/4.png' %}">
+            <img src="{% static 'images/5.jpg' %}">
+        </div>
+    </div>
+</body>
+</html>
