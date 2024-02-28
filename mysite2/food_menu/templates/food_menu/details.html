@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Item</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container1 {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1, p, .food-image {
+            text-align: center;
+        }
+        .food-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .food-name {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .food-description {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .food-price {
+            font-size: 20px;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="food-image">
+            <img src="{% static item.item_img %}" alt="Food Image">
+        </div>
+        <div class="food-details">
+            <h1 class="food-name">{{item.item_name}}</h1>
+            <p class="food-description">{{item.item_desc}}</p>
+            <p class="food-price">${{item.item_price}}</p>
+            <div class="button-container">
+                <a href="{% url 'index' %}" class="button">Home</a>
+                <a href="{% url 'edit' item.id %}" class="button">Edit</a>
+                <a href="#" class="button">Delete</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

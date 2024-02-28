@@ -1,0 +1,118 @@
+<!-- <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Add item</button>
+</form> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        input[type="file"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="file"] {
+            padding: 0;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 0 2px 1px rgba(0, 123, 255, 0.2);
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0062cc;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>Add a New Food Item</h1>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="food-name">Food Name</label>
+                <input type="text" class="form-control" id="food-name" name="{{form.item_name.name}}" placeholder="Enter food name"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="food-description">Food Description</label>
+                <textarea class="form-control" id="food-description" name="{{form.item_desc.name}}" rows="3"
+                    required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="food-price">Food Price</label>
+                <input type="number" step="0.01" class="form-control" id="food-price" name="{{form.item_price.name}}"
+                    placeholder="Enter food price" required>
+            </div>
+            <div class="form-group">
+                <label for="food-image">Food Image</label>
+                <input type="file" class="form-control-file" id="{{form.item_img.name}}" name="food_image">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Food Item</button>
+        </form>
+    </div>
+</body>
+
+</html>

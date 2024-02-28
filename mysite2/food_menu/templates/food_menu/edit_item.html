@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Item</title>
+    <link rel="stylesheet" href="{% static 'food_menu/edit_form.css' %}">
+</head>
+<body>
+    <div class="form-container" style="margin: 100px 0; margin-inline: auto; ">
+        <h1 class="form-title">Edit Item</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="btn-submit">Save Changes</button>
+        </form>
+    </div>
+</body>
+</html>
