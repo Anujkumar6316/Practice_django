@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -12,16 +14,16 @@
     <title>Netflix world – Watch TV Shows Online, Watch Movies Online</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../assets/lib/owl.carousel.css" />
-    <script src="../assets/lib/jquery 3.5.0.js"></script>
-    <script src="../assets/lib/owl.carousel.js"></script>
+    <link rel="stylesheet" href="{% static 'netflix_clone/lib/owl.carousel.css' %}" />
+    <script src="{% static 'netflix_clone/lib/jquery 3.5.0.js' %}"></script>
+    <script src="{% static 'netflix_clone/lib/owl.carousel.js' %}"></script>
 
     <!--main script file-->
-    <script src="../assets/js/main-script.js"></script>
+    <script src="{% static 'netflix_clone/js/main-script.js' %}"></script>
 
 
-    <link rel="stylesheet" href="../assets/css/global.css">
-    <link rel="stylesheet" href="../assets/css/browse.css">
+    <link rel="stylesheet" href="{% static 'netflix_clone/css/global.css' %}">
+    <link rel="stylesheet" href="{% static 'netflix_clone/css/browse.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" integrity="sha256-t2kyTgkh+fZJYRET5l9Sjrrl4UDain5jxdbqe8ejO8A=" crossorigin="anonymous" />
 
     <!-- owl carousel script -->
@@ -46,63 +48,63 @@
                         <h2 class="logo logo-text red-color f-s-28 m-r-25">NETFLIX</h2>
                         <h2 class="second-logo-text red-color f-s-28">N</h2>
                     </a>
-                    <a href="browse.html" class="nav-item home">Home</a>
-                    <a href="tvshow.html" class="nav-item">TV Show</a>
-                    <a href="movies.html" class="nav-item">Movies</a>
-                    <a href="latest.html" class="nav-item latest">Latest</a>
-                    <a href="mylist.html" class="nav-item">My List</a>
+                    <a href="{% url 'netflix_clone:browse' %}" class="nav-item home">Home</a>
+                    <a href="{% url 'netflix_clone:tvshow' %}" class="nav-item">TV Show</a>
+                    <a href="{% url 'netflix_clone:movies' %}" class="nav-item">Movies</a>
+                    <a href="{% url 'netflix_clone:latest' %}" class="nav-item latest">Latest</a>
+                    <a href="{% url 'netflix_clone:mylist' %}" class="nav-item">My List</a>
                 </div>
                 <div class="righticons d-flex flex-end flex-middle">
-                    <a href="search.html"><img src="../images/icons/search.svg" alt="search icon"></a>
+                    <a href="{% url 'netflix_clone:search' %}"><img src="{% static 'netflix_clone/images/icons/search.svg' %}" alt="search icon"></a>
                     <div class="dropdown notification">
-                        <img src="../images/icons/notification.svg" alt="notificatio icon">
+                        <img src="{% static 'netflix_clone/images/icons/notification.svg' %}" alt="notificatio icon">
                         <div class="dropdown-content">
                             <a href="#" class="profile-item d-flex flex-middle">
-                                <img src="../../images/icons/user2.png" alt="user profile icon" class="user-icon">
+                                <img src="{% static 'netflix_clone/images/icons/user2.png' %}" alt="user profile icon" class="user-icon">
                                 <span>You have new notification from <span>User 123</span></span>
                             </a>
                             <a href="#" class="profile-item d-flex flex-middle">
-                                <img src="../../images/icons/user1.png" alt="user profile icon" class="user-icon">
+                                <img src="{% static 'netflix_clone/images/icons/user1.png' %}" alt="user profile icon" class="user-icon">
                                 <span>You have new notification from <span>User 123</span></span>
                             </a>
                             <a href="#" class="profile-item d-flex flex-middle">
-                                <img src="../../images/icons/user4.png" alt="user profile icon" class="user-icon">
+                                <img src="{% static 'netflix_clone/images/icons/user4.png' %}" alt="user profile icon" class="user-icon">
                                 <span>You have new notification from <span>User 123</span></span>
                             </a>
                             <a href="#" class="profile-item d-flex flex-middle">
-                                <img src="../../images/icons/user3.png" alt="user profile icon" class="user-icon">
+                                <img src="{% static 'netflix_clone/images/icons/user3.png' %}" alt="user profile icon" class="user-icon">
                                 <span>You have new notification from <span>User 123</span></span>
                             </a>
                         </div>
                     </div>
                     <div class="dropdown">
-                        <img src="../images/icons/user-image-green.png" alt="user profile icon" class="user-icon"> <span class="profile-arrow"></span>
+                        <img src="{% static 'netflix_clone/images/icons/user-image-green.png' %}" alt="user profile icon" class="user-icon"> <span class="profile-arrow"></span>
 
                         <div class="dropdown-content">
                             <div class="profile-links">
                                 <a href="#" class="profile-item d-flex flex-middle">
-                                    <img src="../images/icons/user1.png" alt="user profile icon" class="user-icon">
+                                    <img src="{% static 'netflix_clone/images/icons/user1.png' %}" alt="user profile icon" class="user-icon">
                                     <span>Rajesh</span>
                                 </a>
                                 <a href="#" class="profile-item d-flex flex-middle">
-                                    <img src="../images/icons/user2.png" alt="user profile icon" class="user-icon">
+                                    <img src="{% static 'netflix_clone/images/icons/user2.png' %}" alt="user profile icon" class="user-icon">
                                     <span>Karan</span>
                                 </a>
                                 <a href="#" class="profile-item d-flex flex-middle">
-                                    <img src="../images/icons/user3.png" alt="user profile icon" class="user-icon">
+                                    <img src="{% static 'netflix_clone/images/icons/user3.png' %}" alt="user profile icon" class="user-icon">
                                     <span>Pappy</span>
                                 </a>
                                 <a href="#" class="profile-item d-flex flex-middle" style="margin-bottom: 13px;">
-                                    <img src="../images/icons/user4.png" alt="user profile icon" class="user-icon">
+                                    <img src="{% static 'netflix_clone/images/icons/user4.png' %}" alt="user profile icon" class="user-icon">
                                     <span>Denny</span>
                                 </a>
                                 <a href="#" class="profile-item last" >Manage Profiles</a>
                             </div>
                             <div class="line"></div>
                             <div class="links d-flex direction-column">
-                                <a href="user-profile/home.html">Account</a>
+                                <a href="{% url 'netflix_clone:home' %}">Account</a>
                                 <a href="#">Help Center</a>
-                                <a href="/">Sign Out of Netflix</a>
+                                <a href="{% url 'netflix_clone:logout' %}">Sign Out of Netflix</a>
                             </div>
                             
                         </div>
@@ -117,8 +119,8 @@
                     <div>
                         <!--trailer video-->
                         <video class="hero-background-image" id="hero-video"
-                            poster="../images/movies/murder mystery.jpg">
-                            <source src="../images/movies/videos/Murder Mystery - Trailer - Netflix.mp4"
+                            poster="{% static 'netflix_clone/images/movies/murder mystery.jpg' %}">
+                            <source src="{% static 'netflix_clone/images/movies/videos/Murder Mystery - Trailer - Netflix.mp4' %}"
                                 type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -129,7 +131,7 @@
 
                     <div class="container text-container" style="z-index: 5;">
                         <div class="contentlogo">
-                            <img src="../images/movies/murder mystery logo.webp" alt="content logo"
+                            <img src="{% static 'netflix_clone/images/movies/murder mystery logo.webp' %}" alt="content logo"
                                 class="show-logo" />
                         </div>
                         <!--top 10 ranking badge svg-->
@@ -166,7 +168,7 @@
                                     <svg viewBox="0 0 24 24">
                                         <path d="M6 4l15 8-15 8z" fill="currentColor"></path>
                                     </svg>
-                                </span> <a href="single.html">Play</a></button>
+                                </span> <a href="{% url 'netflix_clone:single' %}">Play</a></button>
 
                             <button class="more-info-button m-t-20"><span>
                                     <svg viewBox="0 0 24 24">
@@ -193,9 +195,9 @@
                     <div class="mylist-container d-flex flex-start flex-middle flex-no-wrap owl-carousel">
                         <div class="video">
                             <video class="mylist-img p-r-10 p-t-10 video-item"
-                                poster="../images/tv-show/poster/never-have-ever-short poster.jpg">
+                                poster="{% static 'netflix_clone/images/tv-show/poster/never-have-ever-short poster.jpg' %}">
                                 <source
-                                    src="../images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4"
+                                    src="{% static 'netflix_clone/images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4' %}"
                                     type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -225,9 +227,9 @@
 
                         <div class="video">
                             <video class="mylist-img p-r-10 p-t-10 video-item"
-                                poster="../images/movies/we-are-the-milers-poster-little.webp">
+                                poster="{% static 'netflix_clone/images/movies/we-are-the-milers-poster-little.webp' %}">
                                 <source
-                                    src="../images/movies/videos/We're the Millers - Official Trailer [HD].mp4"
+                                    src="{% static 'netflix_clone/images/movies/videos/Were the Millers - Official Trailer [HD].mp4' %}"
                                     type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -257,9 +259,9 @@
 
                         <div class="video">
                             <video class="mylist-img p-r-10 p-t-10 video-item"
-                                poster="../images/movies/extraction-poster.jpg">
+                                poster="{% static 'netflix_clone/images/movies/extraction-poster.jpg' %}">
                                 <source
-                                    src="../images/movies/videos/Murder Mystery - Trailer - Netflix.mp4"
+                                    src="{% static 'netflix_clone/images/movies/videos/Murder Mystery - Trailer - Netflix.mp4' %}"
                                     type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -288,9 +290,9 @@
                         </div>
                         <div class="video">
                             <video class="mylist-img p-r-10 p-t-10 video-item"
-                                poster="../images/tv-show/poster/never-have-ever-short poster.jpg">
+                                poster="{% static 'netflix_clone/images/tv-show/poster/never-have-ever-short poster.jpg' %}">
                                 <source
-                                    src="../images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4"
+                                    src="{% static 'netflix_clone/images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4' %}"
                                     type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -320,9 +322,9 @@
 
                         <div class="video">
                             <video class="mylist-img p-r-10 p-t-10 video-item"
-                                poster="../images/tv-show/poster/never-have-ever-short poster.jpg">
+                                poster="{% static 'netflix_clone/images/tv-show/poster/never-have-ever-short poster.jpg' %}">
                                 <source
-                                    src="../images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4"
+                                    src="{% static 'netflix_clone/images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4' %}"
                                     type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -351,9 +353,9 @@
                         </div>
                         <div class="video">
                             <video class="mylist-img p-r-10 p-t-10 video-item"
-                                poster="../images/tv-show/poster/never-have-ever-short poster.jpg">
+                                poster="{% static 'netflix_clone/images/tv-show/poster/never-have-ever-short poster.jpg' %}">
                                 <source
-                                    src="../images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4"
+                                    src="{% static 'netflix_clone/images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4' %}"
                                     type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -396,9 +398,9 @@
 
                                 <div class="video">
                                     <video class="mylist-img p-r-10 p-t-10 video-item"
-                                        poster="../images/movies/horrible-bosses-middle-poster.webp">
+                                        poster="{% static 'netflix_clone/images/movies/horrible-bosses-middle-poster.webp' %}">
                                         <source
-                                            src="../images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4"
+                                            src="{% static 'netflix_clone/images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4' %}"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
@@ -429,9 +431,9 @@
                         
                                 <div class="video">
                                     <video class="mylist-img p-r-10 p-t-10 video-item"
-                                        poster="../images/movies/kabir-singh-poster.webp">
+                                        poster="{% static 'netflix_clone/images/movies/kabir-singh-poster.webp' %}">
                                         <source
-                                            src="../images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4"
+                                            src="{% static 'netflix_clone/images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4' %}"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
@@ -461,9 +463,9 @@
 
                                 <div class="video">
                                     <video class="mylist-img p-r-10 p-t-10 video-item"
-                                        poster="../images/tv-show/poster/never-have-ever-short poster.jpg">
+                                        poster="{% static 'netflix_clone/images/tv-show/poster/never-have-ever-short poster.jpg' %}">
                                         <source
-                                            src="../images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4"
+                                            src="{% static 'netflix_clone/images/tv-show/videos/Never Have I Ever - Official Trailer - Netflix_2.mp4' %}"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
@@ -493,9 +495,9 @@
         
                                 <div class="video">
                                     <video class="mylist-img p-r-10 p-t-10 video-item"
-                                        poster="../images/movies/we-are-the-milers-poster-little.webp">
+                                        poster="{% static 'netflix_clone/images/movies/we-are-the-milers-poster-little.webp' %}">
                                         <source
-                                            src="../images/movies/videos/We're the Millers - Official Trailer [HD].mp4"
+                                            src="{% static 'netflix_clone/images/movies/videos/Were the Millers - Official Trailer [HD].mp4' %}"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
@@ -525,9 +527,9 @@
         
                                 <div class="video">
                                     <video class="mylist-img p-r-10 p-t-10 video-item"
-                                        poster="../images/movies/extraction-poster.jpg">
+                                        poster="{% static 'netflix_clone/images/movies/extraction-poster.jpg' %}">
                                         <source
-                                            src="../images/movies/videos/Murder Mystery - Trailer - Netflix.mp4"
+                                            src="{% static 'netflix_clone/images/movies/videos/Murder Mystery - Trailer - Netflix.mp4' %}"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
@@ -565,23 +567,23 @@
                     </h4>
                     <div class="romantic-container d-flex flex-start flex-middle flex-no-wrap owl-carousel">
                         <a href="#">
-                            <img src="../images/movies/horrible-bosses-middle-poster.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/horrible-bosses-middle-poster.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/movies/kabir-singh-poster.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/kabir-singh-poster.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/movies/extraction-poster.jpg" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/extraction-poster.jpg' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/tv-show/poster/never-have-ever-short poster.jpg" alt=""
+                            <img src="{% static 'netflix_clone/images/tv-show/poster/never-have-ever-short poster.jpg' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/movies/we-are-the-milers-poster-little.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/we-are-the-milers-poster-little.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
 
                         <a href="#">
-                            <img src="../images/movies/we-are-the-milers-poster-little.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/we-are-the-milers-poster-little.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
 
                     </div>
@@ -589,11 +591,11 @@
 
                 <!--big poster screen left poster right content-->
                 <section class="big-section d-flex flex-start container">
-                    <img src="../images/movies/we are the milers big poster.jpg" alt="">
+                    <img src="{% static 'netflix_clone/images/movies/we are the milers big poster.jpg' %}" alt="">
 
                     <div class="right-side">
                         <div class="contentlogo">
-                            <img src="../images/movies/milers logo.webp" alt="content logo"
+                            <img src="{% static 'netflix_clone/images/movies/milers logo.webp' %}" alt="content logo"
                                 class="show-logo" />
                         </div>
 
@@ -654,23 +656,23 @@
                     </h4>
                     <div class="romantic-container d-flex flex-start flex-middle flex-no-wrap owl-carousel">
                         <a href="#">
-                            <img src="../images/movies/horrible-bosses-middle-poster.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/horrible-bosses-middle-poster.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/movies/kabir-singh-poster.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/kabir-singh-poster.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/movies/extraction-poster.jpg" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/extraction-poster.jpg' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/tv-show/poster/never-have-ever-short poster.jpg" alt=""
+                            <img src="{% static 'netflix_clone/images/tv-show/poster/never-have-ever-short poster.jpg' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/movies/we-are-the-milers-poster-little.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/we-are-the-milers-poster-little.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
 
                         <a href="#">
-                            <img src="../images/movies/we-are-the-milers-poster-little.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/we-are-the-milers-poster-little.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
 
                     </div>
@@ -683,19 +685,19 @@
                     </h4>
                     <div class="romantic-container d-flex flex-start flex-middle flex-no-wrap owl-carousel">
                         <a href="#">
-                            <img src="../images/movies/horrible-bosses-middle-poster.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/horrible-bosses-middle-poster.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/movies/kabir-singh-poster.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/kabir-singh-poster.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/movies/extraction-poster.jpg" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/extraction-poster.jpg' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/tv-show/poster/never-have-ever-short poster.jpg" alt=""
+                            <img src="{% static 'netflix_clone/images/tv-show/poster/never-have-ever-short poster.jpg' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/movies/we-are-the-milers-poster-little.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/we-are-the-milers-poster-little.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
 
 
@@ -709,21 +711,21 @@
                     <h4 class="romantic-heading">
                         Hollywood Action Movies
                     </h4>
-                    <div class="romantic-container d-flex flex-start flex-middle flex-no-wrap owl-carousel">
+                    <div class="romantic-container d-flex flex-start flex-middle flex-no-wrap owl-carousel' %}">
                         <a href="#">
-                            <img src="../images/movies/horrible-bosses-middle-poster.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/horrible-bosses-middle-poster.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/movies/kabir-singh-poster.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/kabir-singh-poster.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/movies/extraction-poster.jpg" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/extraction-poster.jpg' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/tv-show/poster/never-have-ever-short poster.jpg" alt=""
+                            <img src="{% static 'netflix_clone/images/tv-show/poster/never-have-ever-short poster.jpg' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
                         <a href="#">
-                            <img src="../images/movies/we-are-the-milers-poster-little.webp" alt=""
+                            <img src="{% static 'netflix_clone/images/movies/we-are-the-milers-poster-little.webp' %}" alt=""
                                 class="mylist-img p-r-10 p-t-10 image-size item"></a>
 
 
@@ -777,19 +779,19 @@
     </main>
 
     <div class="footer-navigation d-flex space-between">
-        <a href="browse.html" class="nav-item active">
+        <a href="{% url 'netflix_clone:browse' %}" class="nav-item active">
             <i class="fa fa-home" aria-hidden="true"></i> </br>
             <span>Home</span>
         </a>
-        <a href="search.html" class="nav-item">
+        <a href="{% url 'netflix_clone:search' %}" class="nav-item">
             <i class="fa fa-search" aria-hidden="true"></i></br>
             Search
         </a>
-        <a href="latest.html" class="nav-item">
+        <a href="{% url 'netflix_clone:latest' %}" class="nav-item">
             <i class="fa fa-film" aria-hidden="true"></i></br>
             Latest
         </a>
-        <a href="user-profile/home.html" class="nav-item">
+        <a href="{% url 'netflix_clone:home' %}" class="nav-item">
             <i class="fa fa-user" aria-hidden="true"></i></br>
             Account
         </a>

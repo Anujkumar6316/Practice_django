@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -12,8 +14,8 @@
     <title>Netflix login – Watch TV Shows Online, Watch Movies Online</title>
     <meta name="description" content="Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/landing-pages.css">
+    <link rel="stylesheet" href="{% static 'netflix_clone/css/global.css' %}">
+    <link rel="stylesheet" href="{% static 'netflix_clone/css/landing-pages.css' %}">
 </head>
 
 <body>
@@ -33,7 +35,7 @@
     <main style="padding: 0px 10px;">
         <header class="d-flex space-between middle-align">
             <img src="images/logo.png" height="50px" width="170px" alt="site logo main"></img>
-            <button class="button"><a href="#"> Sign In</a></button>
+            <button class="button"><a href="{% url 'netflix_clone:login' %}"> Sign In</a></button>
         </header>
         <section id="logout-section d-flex flex-center">
             <div class="logoutContainer f-s-20 d-flex flex-center direction-column">
@@ -47,7 +49,7 @@
                     This computer will be redirected to the Netflix home page in 30 seconds.
                 </p>
                 <button class="button logoutButton">
-                    <a href="/">Continue</a>
+                    <a href="{% url 'netflix_clone:login' %}">Continue</a>
                 </button>
             </div>
         </section>
