@@ -74,14 +74,14 @@ WSGI_APPLICATION = 'authentication.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': '55D5E3AbcEeebaAAd3c4AD-E2ACfBEbc',
-        'HOST': 'viaduct.proxy.rlwy.net',
-        'PORT': '55901',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'anuj6316$default',
+        'USER': 'anuj6316',
+        'PASSWORD': 'Anuj5530@',
+        'HOST': 'default',
     }
 }
 
