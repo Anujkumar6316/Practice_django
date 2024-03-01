@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'webscrapper',
     'netflix_clone',
     'django.contrib.admin',
     'django.contrib.auth',
